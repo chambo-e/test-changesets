@@ -8,6 +8,18 @@ importers:
     devDependencies:
       '@changesets/cli': 2.25.0
 
+  packages/package-a:
+    specifiers: {}
+
+  packages/package-b:
+    specifiers: {}
+
+  packages/package-c:
+    specifiers:
+      '@chambof/package-b': workspace:1.0.0
+    dependencies:
+      '@chambof/package-b': link:../package-b
+
 packages:
 
   /@babel/code-frame/7.18.6:
