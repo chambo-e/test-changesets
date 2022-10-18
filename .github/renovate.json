@@ -1,0 +1,41 @@
+{
+  "enabledManagers": ["github-actions", "npm"],
+  "extends": ["config:base", ":combinePatchMinorReleases"],
+  "labels": ["dependencies"],
+  "rangeStrategy": "pin",
+  "semanticCommitType": "chore",
+  "semanticCommitScope": "deps",
+  "packageRules": [
+    {
+      "matchDepTypes": ["peerDependencies"],
+      "versionStrategy": "widen"
+    },
+    {
+      "semanticCommitScope": "devDeps",
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["major"]
+    },
+    {
+      "automerge": true,
+      "automergeType": "branch",
+      "semanticCommitScope": "devDeps",
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["minor", "patch"]
+    },
+    {
+      "labels": ["UPDATE-MAJOR"],
+      "stabilityDays": 14,
+      "matchUpdateTypes": ["major"]
+    },
+    {
+      "labels": ["UPDATE-MINOR"],
+      "stabilityDays": 5,
+      "matchUpdateTypes": ["minor"]
+    },
+    {
+      "labels": ["UPDATE-PATCH"],
+      "stabilityDays": 1,
+      "matchUpdateTypes": ["patch"]
+    }
+  ]
+}
