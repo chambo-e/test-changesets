@@ -20,9 +20,9 @@ importers:
 
   packages/package-a:
     specifiers:
-      '@scaleway/random-name': 3.0.0
+      '@scaleway/random-name': 3.0.3
     dependencies:
-      '@scaleway/random-name': 3.0.0
+      '@scaleway/random-name': 3.0.3
 
   packages/package-b:
     specifiers: {}
@@ -294,8 +294,8 @@ packages:
       fastq: 1.13.0
     dev: true
 
-  /@scaleway/random-name/3.0.0:
-    resolution: {integrity: sha512-ml6Cd+OJxUb4NjGMsBLaEUDSYLXIb8c9jBEK7vjLvtgwwaDVT+LdKEwWxiwMcI5vaedfkgTIGhooiTgBxwqijA==}
+  /@scaleway/random-name/3.0.3:
+    resolution: {integrity: sha512-Td1t/Un1LSJZruA0XlpRpZr5X5M2OqfxEf9wUJnNLHbQsZz8VFP5Ae2pn1XQstVU6NzDtsLJ8kNPSh5m+q+17w==}
     dev: false
 
   /@types/is-ci/3.0.0:
